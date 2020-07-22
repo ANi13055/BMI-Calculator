@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #252525;
+  color: #f2f2f2;
+}
+
+.section {
+  margin: 0 auto;
+  width: fit-content;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title {
+    margin: 0 0 20px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .kg-value {
+    font-size: 1.3em;
+    padding: 5px;
+  }
+
+  .btn {
+    margin: 10px 0;
+    padding: 5px 0;
+    font-size: 1em;
+    background: teal;
+    color: white;
+    border: none;
+  }
+
+  .label {
+    text-align: center;
+    font-size: 0.9em;
+    color: orangered;
+    transition: all 250ms ease-out;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .weight-box {
+    margin: 10px 0;
+    padding: 10px 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 300ms ease-out;
+
+    .subtitle {
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+  }
+
+  .pound {
+    background: tomato;
+  }
+  .gram {
+    background: steelblue;
+  }
+  .ounce {
+    background: rebeccapurple;
+  }
+}
