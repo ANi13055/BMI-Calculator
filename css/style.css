@@ -37,7 +37,8 @@ body {
 
 .section .kg-value {
   font-size: 1.3em;
-  padding: 5px;
+  padding: 8px;
+  border: none;
 }
 
 .section .btn {
@@ -63,9 +64,10 @@ body {
   margin: 10px 0;
   padding: 10px 5px;
   opacity: 0;
-  pointer-events: none;
-  -webkit-transition: all 300ms ease-out;
-  transition: all 300ms ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .section .weight-box .subtitle {

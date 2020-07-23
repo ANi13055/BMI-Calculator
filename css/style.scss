@@ -26,7 +26,8 @@ body {
 
   .kg-value {
     font-size: 1.3em;
-    padding: 5px;
+    padding: 8px;
+    border: none;
   }
 
   .btn {
@@ -51,8 +52,7 @@ body {
     margin: 10px 0;
     padding: 10px 5px;
     opacity: 0;
-    pointer-events: none;
-    transition: all 300ms ease-out;
+    user-select: none;
 
     .subtitle {
       margin-bottom: 8px;
