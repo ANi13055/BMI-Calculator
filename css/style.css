@@ -11,12 +11,25 @@ body {
   color: #f2f2f2;
 }
 
-.section {
-  margin: 0 auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+main {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weight,
+.height {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,33 +37,36 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.section .title {
+.weight .title,
+.height .title {
   margin: 0 0 20px;
-  text-align: center;
   font-weight: 500;
 }
 
-.section .kg-value {
-  font-size: 1.3em;
-  padding: 8px;
+.weight .kg-value,
+.weight .meter-value,
+.height .kg-value,
+.height .meter-value {
+  font-size: 1em;
+  padding: 5px;
   border: none;
 }
 
-.section .btn {
+.weight .btn,
+.height .btn {
   margin: 10px 0;
   padding: 5px 0;
-  font-size: 1em;
+  font-size: 0.9em;
   background: teal;
   color: white;
   border: none;
+  cursor: pointer;
 }
 
-.section .label {
+.weight .label,
+.height .label {
   text-align: center;
   font-size: 0.9em;
   color: orangered;
@@ -60,7 +76,10 @@ body {
   opacity: 0;
 }
 
-.section .weight-box {
+.weight .weight-box,
+.weight .height-box,
+.height .weight-box,
+.height .height-box {
   margin: 10px 0;
   padding: 10px 5px;
   opacity: 0;
@@ -68,22 +87,37 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: all 350ms ease-out;
+  transition: all 350ms ease-out;
 }
 
-.section .weight-box .subtitle {
+.weight .weight-box.show,
+.weight .height-box.show,
+.height .weight-box.show,
+.height .height-box.show {
+  opacity: 1;
+}
+
+.weight .weight-box .subtitle,
+.weight .height-box .subtitle,
+.height .weight-box .subtitle,
+.height .height-box .subtitle {
   margin-bottom: 8px;
   font-weight: 500;
 }
 
-.section .pound {
+.weight .pound,
+.height .pound {
   background: tomato;
 }
 
-.section .gram {
+.weight .gram,
+.height .gram {
   background: steelblue;
 }
 
-.section .ounce {
+.weight .ounce,
+.height .ounce {
   background: rebeccapurple;
 }
 /*# sourceMappingURL=style.css.map */
