@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weight Converter</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="section">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <main>
+    <!-- weight converter -->
+    <section class="weight">
       <h1 class="title">Weight Converter</h1>
-      <input type="text" class="kg-value" placeholder="Value in kg.." />
-      <button class="btn convert-btn">Convert</button>
+      <input type="text" class="kg-value" placeholder="Value in kg" />
+      <button class="btn weight-btn">Convert</button>
 
       <!-- enter value label -->
       <span class="label">Please enter value !</span>
@@ -33,7 +34,34 @@
         <h3 class="subtitle">Ounce</h3>
         <span class="ounce-value">&nbsp;</span>
       </div>
-    </div>
-    <script src="js/app.js"></script>
-  </body>
+    </section>
+
+    <!-- height converter -->
+    <section class="height">
+      <h1 class="title">Height Converter</h1>
+      <input type="text" class="meter-value" placeholder="Value in m" />
+      <button class="btn height-btn">Convert</button>
+
+      <!-- enter value label -->
+      <span class="label">Please enter value !</span>
+
+      <div class="height-box pound">
+        <h3 class="subtitle">Km</h3>
+        <span class="km-value">&nbsp;</span>
+      </div>
+
+      <div class="height-box gram">
+        <h3 class="subtitle">Inch</h3>
+        <span class="inch-value">&nbsp;</span>
+      </div>
+
+      <div class="height-box ounce">
+        <h3 class="subtitle">Foot</h3>
+        <span class="foot-value">&nbsp;</span>
+      </div>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+
 </html>
