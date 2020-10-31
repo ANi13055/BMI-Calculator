@@ -43,6 +43,23 @@ weightConvert.addEventListener("click", function () {
         // change button innertext
         weightConvert.innerText = 'Convert';
     }
+
+    // if height AND weight values provided, calculate BMI 
+    if (document.querySelector(".height-btn").innerText === "Converted") {
+        let heightValue = document.querySelector(".meter-value").value;
+        let bmiValue = weightValue / (heightValue * heightValue)
+        document.querySelector(".bmi-result").innerText = bmiValue
+
+        // calculate BMI status based on BMI result
+        let status = ""
+        if (bmiValue < 18.5) status = "Underweight";
+        if (bmiValue > 18.5 && bmiValue <= 24.9) status = "Normal";
+        if (bmiValue > 25 && bmiValue <= 29.9) status = "Overweight";
+        if (bmiValue >= 30) status = "Obese";
+        document.querySelector(".status-result").innerText = status;
+    }
+
+    document.querySelectorAll(".health-info").classList.add('show');
 });
 
 weight.addEventListener('mousedown', (e) => {
@@ -92,9 +109,30 @@ heightConvert.addEventListener("click", function () {
         // change button innertext
         heightConvert.innerText = 'Convert';
     }
+
+    // if height AND weight values provided, calculate BMI 
+    if (document.querySelector(".weight-btn").innerText === "Converted") {
+        let weightValue = document.querySelector(".kg-value").value;
+        let bmiValue = weightValue / (heightValue * heightValue)
+        document.querySelector(".bmi-result").innerText = bmiValue
+
+        // calculate BMI status based on BMI result
+        let status = ""
+        if (bmiValue < 18.5) status = "Underweight";
+        if (bmiValue > 18.5 && bmiValue <= 24.9) status = "Normal";
+        if (bmiValue > 25 && bmiValue <= 29.9) status = "Overweight";
+        if (bmiValue >= 30) status = "Obese";
+        document.querySelector(".status-result").innerText = status;
+    }
+
+
 });
 
 height.addEventListener('mousedown', (e) => {
     // console.log(e);
     heightConvert.innerText = 'Convert';
 })
+
+
+
+
